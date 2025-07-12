@@ -27,7 +27,7 @@ I'm Joseph George, a dedicated full-stack developer with 1 year of experience bu
 ## Contact
 
 - Email: josephgeorgenessim@gmail.com
-- [LinkedIn](#) | [GitHub](#) | [Twitter](#)
+- [LinkedIn](https://www.linkedin.com/in/joseph-george-nessim/) | [GitHub](https://github.com/josephgeorgenessim) 
 
 ---
 
