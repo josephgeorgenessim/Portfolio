@@ -6,8 +6,6 @@ A modern, full-stack developer portfolio showcasing the work, skills, and experi
 
 I'm Joseph George, a dedicated full-stack developer with 1 year of experience building web applications. I specialize in React, Next.js, and TypeScript, focusing on delivering high-quality, user-centered applications using modern technologies and best practices.
 
-## Featured Projects
-
 ### 1. E-Commerce Platform
 A full-featured e-commerce solution with:
 - Real-time inventory
@@ -17,7 +15,7 @@ A full-featured e-commerce solution with:
 - Product catalog & search
 - Responsive design
 
-**Tech:** Next.js, TypeScript, Tailwind CSS, Stripe API, PostgreSQL, Prisma
+**Tech:** Next.js, TypeScript, Tailwind CSS, Stripe API, MongoDB, JWT
 
 ### 2. Task Management App
 A collaborative project management tool featuring:
