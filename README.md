@@ -1,34 +1,61 @@
-# Joseph George Portfolio
+# Shadcn-UI Template Usage Instructions
 
-A modern, full-stack developer portfolio showcasing the work, skills, and experience of Joseph George. Built with Next.js, React, and TypeScript, this portfolio demonstrates a range of web development projects, clean code practices, and a passion for creating exceptional digital experiences.
+## technology stack
 
-## About
+This project is built with:
 
-I'm Joseph George, a dedicated full-stack developer with 1 year of experience building web applications. I specialize in React, Next.js, and TypeScript, focusing on delivering high-quality, user-centered applications using modern technologies and best practices.
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-## Skills & Technologies
-- **Languages:** TypeScript, JavaScript, Python, C++, Java, SQL, HTML, CSS
-- **Frameworks/Libraries:** React, Next.js, Redux, Bootstrap, Tailwind CSS, SASS, Shadcn/ui
-- **Backend/Tools:** Node.js, Express.js, MongoDB, REST APIs, JWT, Git, GitHub
-- **Soft Skills:** Problem-solving, Communication, Collaboration, Time Management, Leadership
+All shadcn/ui components have been downloaded under `@/components/ui`.
 
-## Getting Started
+## File Structure
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-3. Open [http://localhost:3000](http://localhost:3000) to view the site.
+- `index.html` - HTML entry point
+- `vite.config.ts` - Vite configuration file
+- `tailwind.config.js` - Tailwind CSS configuration file
+- `package.json` - NPM dependencies and scripts
+- `src/app.tsx` - Root component of the project
+- `src/main.tsx` - Project entry point
+- `src/index.css` - Existing CSS configuration
 
-## Contact
+## Components
 
-- Email: josephgeorgenessim@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/joseph-george-nessim/) | [GitHub](https://github.com/josephgeorgenessim) 
+- All shadcn/ui components are pre-downloaded and available at `@/components/ui`
 
----
+## Styling
 
-> Portfolio of Joseph George, a passionate full-stack developer specializing in React, Next.js, and modern web technologies. 
+- Add global styles to `src/index.css` or create new CSS files as needed
+- Use Tailwind classes for styling components
+
+## Development
+
+- Import components from `@/components/ui` in your React components
+- Customize the UI by modifying the Tailwind configuration
+
+## Note
+
+The `@/` path alias points to the `src/` directory
+
+# Commands
+
+**Install Dependencies**
+
+```shell
+pnpm i
+```
+
+**Start Preview**
+
+```shell
+pnpm run dev
+```
+
+**To build**
+
+```shell
+pnpm run build
+```

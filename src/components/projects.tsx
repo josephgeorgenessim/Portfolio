@@ -1,0 +1,201 @@
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Badge } from "./ui/badge";
+
+// Project data
+const projects = [
+  {
+    id: 1,
+    title: "E-commerce Platform",
+    description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment integration.",
+    image: "/assets/projects/ecommerce-project.jpg",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe"],
+    liveLink: "https://example.com/ecommerce",
+    githubLink: "https://github.com/josephnessim/ecommerce-platform",
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "A collaborative task management application with real-time updates using WebSockets, task assignment, and project tracking.",
+    image: "/assets/projects/task-management.jpg",
+    technologies: ["React", "TypeScript", "Node.js", "MongoDB", "Socket.io", "JWT"],
+    liveLink: "https://example.com/taskmanager",
+    githubLink: "https://github.com/josephnessim/task-manager",
+  },
+  {
+    id: 3,
+    title: "Social Media Dashboard",
+    description: "A comprehensive dashboard for social media analytics with data visualization, user engagement metrics, and content scheduling.",
+    image: "/assets/projects/social-dashboard.jpg",
+    technologies: ["React", "D3.js", "Express", "MongoDB", "Redux", "Tailwind CSS"],
+    liveLink: "https://example.com/dashboard",
+    githubLink: "https://github.com/josephnessim/social-dashboard",
+  },
+];
+
+export default function Projects() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6 }
+    },
+  };
+  
+  return (
+    <section id="projects" className="py-20">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="max-w-6xl mx-auto"
+        >
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              My <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">Projects</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Here are some of the projects I've worked on. Each project reflects my skills and experience in full-stack development.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {projects.map((project) => (
+              <motion.div
+                key={project.id}
+                variants={itemVariants}
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Card className="h-full flex flex-col overflow-hidden group border-muted-foreground/20">
+                  <div className="relative overflow-hidden h-48">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
+                      className="h-full"
+                    >
+                      <div 
+                        className="w-full h-full bg-muted bg-cover bg-center"
+                        style={{ 
+                          backgroundImage: `url(${project.image})`,
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="flex gap-4">
+                          {project.githubLink && (
+                            <motion.a
+                              href={project.githubLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.9 }}
+                              className="bg-background text-foreground p-2 rounded-full"
+                            >
+                              <Github className="h-5 w-5" />
+                            </motion.a>
+                          )}
+                          {project.liveLink && (
+                            <motion.a
+                              href={project.liveLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.9 }}
+                              className="bg-background text-foreground p-2 rounded-full"
+                            >
+                              <ExternalLink className="h-5 w-5" />
+                            </motion.a>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>{project.title}</CardTitle>
+                    <CardDescription className="line-clamp-2">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, index) => (
+                        <Badge key={index} variant="outline" className="bg-muted">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <div className="flex gap-4">
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm flex items-center text-muted-foreground hover:text-foreground"
+                        >
+                          <Github className="h-4 w-4 mr-1" /> Source
+                        </a>
+                      )}
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm flex items-center text-muted-foreground hover:text-foreground"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-1" /> Live Demo
+                        </a>
+                      )}
+                    </div>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+          
+          <motion.div variants={itemVariants} className="mt-12 text-center">
+            <p className="text-muted-foreground mb-4">
+              Want to see more of my work?
+            </p>
+            <motion.a
+              href="https://github.com/josephnessim"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-6 py-3 rounded-md bg-muted hover:bg-muted/80"
+            >
+              <Github className="h-5 w-5 mr-2" />
+              Visit My GitHub
+            </motion.a>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
