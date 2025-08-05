@@ -16,7 +16,7 @@ const projects = [
     id: 1,
     title: "E-commerce Platform",
     description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment integration.",
-    image: "/assets/projects/ecommerce-project.jpg",
+    image: "/assets/projects/ecommerce_1.png",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Redux", "Tailwind CSS"],
     liveLink: "https://e-commerce-sepia-three-89.vercel.app/",
     githubLink: "https://github.com/josephgeorgenessim/E-Commerce",
