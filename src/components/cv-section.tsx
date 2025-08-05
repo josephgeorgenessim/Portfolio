@@ -1,8 +1,53 @@
 import { motion } from "framer-motion";
 import { FileTextIcon, DownloadIcon } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import { useToast } from "./ui/use-toast";
 
 export default function CVSection() {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const { toast } = useToast();
+
+  const handleDownloadCV = async () => {
+    setIsDownloading(true);
+
+    // Show starting toast
+    toast({
+      title: "Starting download...",
+      description: "Preparing your CV for download",
+      duration: 2000,
+    });
+
+    try {
+      // Simulate a small delay to show progress
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      const link = document.createElement('a');
+      link.href = '/assets/cv/resumeJosephGeorge.pdf';
+      link.download = 'Joseph_Nessim_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Show success toast
+      toast({
+        title: "Download started!",
+        description: "Your CV is being downloaded to your device",
+        duration: 3000,
+      });
+    } catch (error) {
+      // Show error toast
+      toast({
+        title: "Download failed",
+        description: "There was an error downloading your CV. Please try again.",
+        variant: "destructive",
+        duration: 4000,
+      });
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -12,7 +57,7 @@ export default function CVSection() {
       },
     },
   };
-  
+
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -21,7 +66,7 @@ export default function CVSection() {
       transition: { duration: 0.5 }
     },
   };
-  
+
   return (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -37,14 +82,14 @@ export default function CVSection() {
               My <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">Resume</span>
             </h2>
           </motion.div>
-          
-          <motion.p 
+
+          <motion.p
             variants={itemVariants}
             className="text-muted-foreground mb-8 max-w-lg mx-auto"
           >
             Download my resume to learn more about my skills, experience, and education.
           </motion.p>
-          
+
           <motion.div
             variants={itemVariants}
             className="mb-12"
@@ -58,22 +103,24 @@ export default function CVSection() {
                 <h3 className="text-xl font-semibold mb-2">Joseph_Nessim_CV.pdf</h3>
                 <p className="text-sm text-muted-foreground">Updated: July 2023</p>
               </div>
-              
+
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
+                <Button
                   className="bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600 text-white shadow-md shadow-blue-500/20"
                   size="lg"
+                  disabled={isDownloading}
+                  onClick={handleDownloadCV}
                 >
                   <DownloadIcon className="mr-2 h-4 w-4" />
-                  Download CV
+                  {isDownloading ? "Downloading..." : "Download CV"}
                 </Button>
               </motion.div>
             </div>
           </motion.div>
-          
+
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-semibold mb-2">Looking for Opportunities</h3>
             <p className="text-muted-foreground">

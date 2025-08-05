@@ -17,27 +17,18 @@ const projects = [
     title: "E-commerce Platform",
     description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment integration.",
     image: "/assets/projects/ecommerce-project.jpg",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe"],
-    liveLink: "https://example.com/ecommerce",
-    githubLink: "https://github.com/josephnessim/ecommerce-platform",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Redux", "Tailwind CSS"],
+    liveLink: "https://e-commerce-sepia-three-89.vercel.app/",
+    githubLink: "https://github.com/josephgeorgenessim/E-Commerce",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates using WebSockets, task assignment, and project tracking.",
-    image: "/assets/projects/task-management.jpg",
-    technologies: ["React", "TypeScript", "Node.js", "MongoDB", "Socket.io", "JWT"],
-    liveLink: "https://example.com/taskmanager",
-    githubLink: "https://github.com/josephnessim/task-manager",
-  },
-  {
-    id: 3,
-    title: "Social Media Dashboard",
-    description: "A comprehensive dashboard for social media analytics with data visualization, user engagement metrics, and content scheduling.",
-    image: "/assets/projects/social-dashboard.jpg",
-    technologies: ["React", "D3.js", "Express", "MongoDB", "Redux", "Tailwind CSS"],
-    liveLink: "https://example.com/dashboard",
-    githubLink: "https://github.com/josephnessim/social-dashboard",
+    title: "To-Do List App",
+    description: "A simple and secure to-do list application built with React for the frontend and Node.js for the backend. Features user authentication with JWT, allowing users to manage their personal tasks.",
+    image: "/assets/projects/todolist.png",
+    technologies: ["React", "Node.js", "JWT", "Express", "MongoDB", "Redux", "Tailwind CSS"],
+    liveLink: "https://example.com/todolist",
+    githubLink: "https://github.com/josephgeorgenessim/todo-list",
   },
 ];
 
@@ -51,7 +42,7 @@ export default function Projects() {
       },
     },
   };
-  
+
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -60,7 +51,7 @@ export default function Projects() {
       transition: { duration: 0.6 }
     },
   };
-  
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
@@ -79,8 +70,8 @@ export default function Projects() {
               Here are some of the projects I've worked on. Each project reflects my skills and experience in full-stack development.
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
@@ -98,9 +89,9 @@ export default function Projects() {
                       transition={{ duration: 0.4 }}
                       className="h-full"
                     >
-                      <div 
+                      <div
                         className="w-full h-full bg-muted bg-cover bg-center"
-                        style={{ 
+                        style={{
                           backgroundImage: `url(${project.image})`,
                         }}
                       />
@@ -177,7 +168,7 @@ export default function Projects() {
               </motion.div>
             ))}
           </motion.div>
-          
+
           <motion.div variants={itemVariants} className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
               Want to see more of my work?
