@@ -5,6 +5,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Send, CheckCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({
@@ -12,11 +13,11 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
-  
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -25,35 +26,47 @@ export default function ContactForm() {
       [e.target.name]: e.target.value,
     });
   };
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
     setIsSubmitting(true);
-    
-    // Simple validation
+
     if (!formState.name || !formState.email || !formState.message) {
       setError("All fields are required");
       setIsSubmitting(false);
       return;
     }
-    
+
     try {
-      // In a real implementation, this would use EmailJS or a similar service
-      // For this demo, we'll simulate a successful submission after a short delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // Reset form
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const userID = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Add current time before sending
+      const form = e.target as HTMLFormElement;
+      const timeInput = form.querySelector('input[name="time"]') as HTMLInputElement;
+      timeInput.value = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+
+      await emailjs.sendForm(serviceID, templateID, form, userID);
+
       setFormState({ name: "", email: "", message: "" });
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err) {
+      console.error("EmailJS Error:", err);
       setError("Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
   };
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,7 +76,7 @@ export default function ContactForm() {
       },
     },
   };
-  
+
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -72,7 +85,7 @@ export default function ContactForm() {
       transition: { duration: 0.5 }
     },
   };
-  
+
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -91,11 +104,11 @@ export default function ContactForm() {
               Have a project in mind or want to collaborate? Send me a message and I'll get back to you as soon as possible.
             </p>
           </motion.div>
-          
+
           <motion.div variants={itemVariants}>
             <div className="bg-background rounded-lg p-8 shadow-md">
               {isSubmitted ? (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-8"
@@ -110,6 +123,7 @@ export default function ContactForm() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit}>
+                  <input type="hidden" name="time" value="" />
                   <div className="space-y-6">
                     <motion.div variants={itemVariants}>
                       <div className="space-y-2">
@@ -124,7 +138,7 @@ export default function ContactForm() {
                         />
                       </div>
                     </motion.div>
-                    
+
                     <motion.div variants={itemVariants}>
                       <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
@@ -139,7 +153,7 @@ export default function ContactForm() {
                         />
                       </div>
                     </motion.div>
-                    
+
                     <motion.div variants={itemVariants}>
                       <div className="space-y-2">
                         <Label htmlFor="message">Message</Label>
@@ -155,7 +169,7 @@ export default function ContactForm() {
                         />
                       </div>
                     </motion.div>
-                    
+
                     {error && (
                       <motion.div
                         initial={{ opacity: 0, y: -10 }}
@@ -165,9 +179,9 @@ export default function ContactForm() {
                         {error}
                       </motion.div>
                     )}
-                    
+
                     <motion.div variants={itemVariants} className="text-right">
-                      <Button 
+                      <Button
                         type="submit"
                         className="bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600 text-white shadow-md shadow-blue-500/20"
                         disabled={isSubmitting}
