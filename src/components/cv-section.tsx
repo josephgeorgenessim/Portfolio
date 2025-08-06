@@ -124,7 +124,7 @@ export default function CVSection() {
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-semibold mb-2">Looking for Opportunities</h3>
             <p className="text-muted-foreground">
-              Currently open to full-time positions and freelance projects.
+              Currently open to part-time positions and freelance projects.
             </p>
           </motion.div>
         </motion.div>

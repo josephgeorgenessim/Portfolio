@@ -25,9 +25,9 @@ const socialLinks = [
     id: 3,
     name: "Email",
     icon: <Mail className="w-6 h-6" />,
-    url: "mailto:joseph.nessim@example.com",
+    url: "mailto:josephgeorgenessim@gmail.com",
     color: "#EA4335",
-    username: "joseph.nessim@example.com",
+    username: "josephgeorgenessim@gmail.com",
     description: "Send me an email",
   },
   {
