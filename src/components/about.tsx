@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
 
@@ -74,7 +75,7 @@ const techStack = [
     icon: "devicon-github-original",
     category: "tools",
     color: "#181717"
-  }
+  },
 ];
 
 export default function About() {
@@ -160,6 +161,7 @@ export default function About() {
               </motion.div>
             ))}
           </motion.div>
+
 
           <motion.div variants={itemVariants}>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 bg-background rounded-lg p-6 shadow-md">

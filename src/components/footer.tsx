@@ -15,29 +15,6 @@ export default function Footer() {
               </p>
             </div>
             
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="flex items-center text-sm text-muted-foreground"
-            >
-              <span>Built with</span>
-              <motion.div 
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{ 
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 2,
-                  repeatDelay: 1
-                }}
-                className="mx-1"
-              >
-                <Heart className="h-4 w-4 text-red-500 fill-red-500" />
-              </motion.div>
-              <span>using React & Tailwind CSS</span>
-            </motion.div>
           </div>
         </div>
       </div>

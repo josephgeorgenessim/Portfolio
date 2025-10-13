@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import {
@@ -63,6 +64,40 @@ const projects = [
     ],
     liveLink: "", 
     githubLink: "https://github.com/josephgeorgenessim/E-commerce_Backend",
+  },
+  {
+    id: 4,
+    title: "mobile-wallet",
+    description:
+      "A full-stack mobile wallet application with React Native and a Node.js backend. It features transaction management, user-specific data, and financial summaries.",
+    image: "",
+    technologies: [
+      "React Native",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "TypeScript",
+    ],
+    liveLink: "",
+    githubLink: "https://github.com/josephgeorgenessim/mobile-wallet",
+  },
+  {
+    id: 5,
+    title: "movie-app",
+    description:
+      "A responsive mobile app for browsing and searching movies, built with React Native, Expo, and TypeScript. It uses the TMDB API for data and Appwrite for backend services.",
+    image: "",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "React Navigation",
+      "NativeWind",
+      "TMDB API",
+      "Appwrite",
+    ],
+    liveLink: "",
+    githubLink: "https://github.com/josephgeorgenessim/movie-app",
   },
 ];
 
