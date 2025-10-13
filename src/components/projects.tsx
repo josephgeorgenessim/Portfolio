@@ -269,7 +269,7 @@ export default function Projects() {
               Want to see more of my work?
             </p>
             <motion.a
-              href="https://github.com/josephnessim"
+              href="https://github.com/josephgeorgenessim"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
