@@ -8,96 +8,85 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Badge } from "./ui/badge";
+} from "../ui/card";
+import { Badge } from "../ui/badge";
 
 // Project data - includes frontend, full-stack, and backend-only projects
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description:
-      "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment integration.",
+    title: "CoinPulse --- Real-Time Crypto Tracker",
+    description: "Built a professional cryptocurrency tracking platform with WebSocket-powered live price updates, interactive candlestick charts, and comprehensive market stats.",
+    image: "/assets/projects/CoinPulse.png",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "CoinGecko API",
+      "WebSocket",
+      "Lightweight Charts"
+    ],
+    liveLink: "https://coinpulse-green.vercel.app/",
+    githubLink: "https://github.com/josephgeorgenessim/coinpulse",
+  },
+  {
+    id: 2,
+    title: "E-Commerce Website (Full-Stack)",
+    description: "Built using React, TypeScript, and Tailwind CSS with Node.js/Express. Features product management, shopping cart, and Stripe integration.",
     image: "/assets/projects/ecommerce_1.png",
     technologies: [
       "React",
       "Node.js",
       "Express",
       "MongoDB",
-      "Redux",
       "Tailwind CSS",
+      "Stripe",
     ],
     liveLink: "https://e-commerce-sepia-three-89.vercel.app/",
     githubLink: "https://github.com/josephgeorgenessim/E-Commerce",
   },
   {
-    id: 2,
-    title: "To-Do List App",
-    description:
-      "A simple and secure to-do list application built with React for the frontend and Node.js for the backend. Features user authentication with JWT, allowing users to manage their personal tasks.",
-    image: "/assets/projects/todolist.png",
-    technologies: [
-      "React",
-      "Node.js",
-      "JWT",
-      "Express",
-      "MongoDB",
-      "Redux",
-      "Tailwind CSS",
-    ],
-    liveLink: "https://example.com/todolist",
-    githubLink: "https://github.com/josephgeorgenessim/todo-list",
-  },
-  {
     id: 3,
-    title: "RESTful API - E-commerce",
-    description:
-      "A secure RESTful API built with Node.js and Express. Features user authentication with JWT, role-based access control, and full CRUD operations for tasks and users.",
+    title: "Wallet Backend API",
+    description: "Node.js/PostgreSQL API for transaction management and balance tracking. Features rate limiting with Redis and secure authentication.",
     image: "", 
     technologies: [
       "Node.js",
       "Express",
+      "PostgreSQL",
+      "Redis",
       "JWT",
-      "MongoDB",
-      "Mongoose",
-      "Bcrypt",
     ],
     liveLink: "", 
-    githubLink: "https://github.com/josephgeorgenessim/E-commerce_Backend",
-  },
-  {
-    id: 4,
-    title: "mobile-wallet",
-    description:
-      "A full-stack mobile wallet application with React Native and a Node.js backend. It features transaction management, user-specific data, and financial summaries.",
-    image: "",
-    technologies: [
-      "React Native",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "TypeScript",
-    ],
-    liveLink: "",
     githubLink: "https://github.com/josephgeorgenessim/mobile-wallet",
   },
   {
-    id: 5,
-    title: "movie-app",
-    description:
-      "A responsive mobile app for browsing and searching movies, built with React Native, Expo, and TypeScript. It uses the TMDB API for data and Appwrite for backend services.",
+    id: 4,
+    title: "Movie App (React Native)",
+    description: "Mobile app built with React Native and Expo. Integrates real-time movie data via TMDB API with smooth animations.",
     image: "",
     technologies: [
       "React Native",
       "Expo",
       "TypeScript",
-      "React Navigation",
-      "NativeWind",
       "TMDB API",
-      "Appwrite",
     ],
     liveLink: "",
     githubLink: "https://github.com/josephgeorgenessim/movie-app",
+  },
+  {
+    id: 5,
+    title: "Portfolio Website (Next.js)",
+    description: "Modern portfolio built with Next.js App Router and Tailwind CSS. Features SEO optimization, dynamic routing, and responsive design.",
+    image: "/assets/projects/portfolio.jpg",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    liveLink: "https://portfolio-website-green.vercel.app/",
+    githubLink: "https://github.com/josephgeorgenessim/Portfolio",
   },
 ];
 

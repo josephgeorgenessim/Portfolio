@@ -1,0 +1,187 @@
+{
+    "personal_info": {
+        "name": "Joseph Nessim",
+        "full_name": "Joseph George Nessim",
+        "title": "Full-Stack Web Developer",
+        "bio": [
+            "Full-Stack Web Developer with strong experience building scalable and secure web and mobile applications using React, Next.js, Node.js, and Express. Proven ability to deliver production-ready systems, optimize performance, and design clean APIs.",
+            "Passionate about backend architecture, DevOps practices, and system design, with a solid foundation in networking and cloud computing. Currently a 4th-year Computer Science student at Benha University.",
+            "Constantly learning and exploring new technologies to stay at the forefront of web development. I believe in writing clean, maintainable code and building applications with scalability in mind."
+        ],
+        "hero_tagline": "Full-Stack Web Developer with strong experience building scalable and secure web and mobile applications using React, Next.js, Node.js, and Express."
+    },
+    "tech_stack": [
+        {
+            "name": "MongoDB",
+            "category": "backend",
+            "color": "#4DB33D"
+        },
+        {
+            "name": "Express",
+            "category": "backend",
+            "color": "#000000"
+        },
+        {
+            "name": "React",
+            "category": "frontend",
+            "color": "#61DAFB"
+        },
+        {
+            "name": "Node.js",
+            "category": "backend",
+            "color": "#68A063"
+        },
+        {
+            "name": "JavaScript",
+            "category": "language",
+            "color": "#F7DF1E"
+        },
+        {
+            "name": "TypeScript",
+            "category": "language",
+            "color": "#3178C6"
+        },
+        {
+            "name": "HTML5",
+            "category": "frontend",
+            "color": "#E34F26"
+        },
+        {
+            "name": "CSS3",
+            "category": "frontend",
+            "color": "#1572B6"
+        },
+        {
+            "name": "Tailwind CSS",
+            "category": "frontend",
+            "color": "#06B6D4"
+        },
+        {
+            "name": "Redux",
+            "category": "frontend",
+            "color": "#764ABC"
+        },
+        {
+            "name": "Git",
+            "category": "tools",
+            "color": "#F05032"
+        },
+        {
+            "name": "GitHub",
+            "category": "tools",
+            "color": "#181717"
+        },
+        {
+            "name": "Docker",
+            "category": "tools",
+            "color": "#2496ED"
+        },
+        {
+            "name": "PostgreSQL",
+            "category": "backend",
+            "color": "#336791"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "CoinPulse --- Real-Time Crypto Tracker",
+            "description": "A professional cryptocurrency tracking platform with WebSocket-powered live price updates, interactive candlestick charts, and comprehensive market stats.",
+            "image": "/assets/projects/CoinPulse.png",
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "CoinGecko API",
+                "WebSocket",
+                "Lightweight Charts"
+            ],
+            "liveLink": "https://coinpulse-green.vercel.app/",
+            "githubLink": "https://github.com/josephgeorgenessim/coinpulse"
+        },
+        {
+            "id": 2,
+            "title": "E-Commerce Website (Full-Stack)",
+            "description": "Built using React, TypeScript, and Tailwind CSS with Node.js/Express. Features product management, shopping cart, and Stripe integration.",
+            "image": "/assets/projects/ecommerce_1.png",
+            "technologies": [
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Tailwind CSS",
+                "Stripe"
+            ],
+            "liveLink": "https://e-commerce-sepia-three-89.vercel.app/",
+            "githubLink": "https://github.com/josephgeorgenessim/E-Commerce"
+        },
+        {
+            "id": 3,
+            "title": "Wallet Backend API",
+            "description": "Node.js/PostgreSQL API for transaction management and balance tracking. Features rate limiting with Redis and secure authentication.",
+            "image": "",
+            "technologies": [
+                "Node.js",
+                "Express",
+                "PostgreSQL",
+                "Redis",
+                "JWT"
+            ],
+            "liveLink": "",
+            "githubLink": "https://github.com/josephgeorgenessim/mobile-wallet"
+        },
+        {
+            "id": 4,
+            "title": "Movie App (React Native)",
+            "description": "Mobile app built with React Native and Expo. Integrates real-time movie data via TMDB API with smooth animations.",
+            "image": "",
+            "technologies": [
+                "React Native",
+                "Expo",
+                "TypeScript",
+                "TMDB API"
+            ],
+            "liveLink": "",
+            "githubLink": "https://github.com/josephgeorgenessim/movie-app"
+        },
+        {
+            "id": 5,
+            "title": "Portfolio Website (Next.js)",
+            "description": "Modern portfolio built with Next.js App Router and Tailwind CSS. Features SEO optimization and responsive design.",
+            "image": "/assets/projects/portfolio.jpg",
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Framer Motion"
+            ],
+            "liveLink": "https://portfolio-website-green.vercel.app/",
+            "githubLink": "https://github.com/josephgeorgenessim/Portfolio"
+        }
+    ],
+    "social_links": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/joseph-george-778173232/",
+            "username": "Joseph George",
+            "description": "Connect with me professionally"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/josephgeorgenessim",
+            "username": "@josephgeorgenessim",
+            "description": "Check out my code repositories"
+        },
+        {
+            "name": "Email",
+            "url": "mailto:josephgeorgenessim@gmail.com",
+            "username": "josephgeorgenessim@gmail.com",
+            "description": "Send me an email"
+        }
+    ],
+    "cv": {
+        "filename": "Joseph_Nessim_CV.pdf",
+        "path": "/assets/cv/resumeJosephGeorge.pdf",
+        "last_updated": "Feb 2026"
+    }
+}

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { FileTextIcon, DownloadIcon } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { useState } from "react";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "../ui/use-toast";
 
 export default function CVSection() {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -101,7 +101,7 @@ export default function CVSection() {
                   <FileTextIcon className="w-8 h-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Joseph_Nessim_CV.pdf</h3>
-                <p className="text-sm text-muted-foreground">Updated: July 2023</p>
+                <p className="text-sm text-muted-foreground">Updated: Feb 2026</p>
               </div>
 
               <motion.div

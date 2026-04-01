@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDownIcon } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 // Particle component for the animated background
 function Particle({ index }: { index: number }) {
@@ -44,7 +44,7 @@ export default function Hero() {
   
   // Texts to be animated
   const name = "Joseph Nessim";
-  const title = "Full-Stack MERN Developer";
+  const title = "Full-Stack Web Developer";
   
   // Scroll to About section
   const scrollToAbout = () => {
@@ -116,9 +116,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1.3 + name.length * 0.08 }}
           >
             <p className="text-base md:text-lg mb-8 text-muted-foreground max-w-xl mx-auto">
-              I craft modern, responsive web applications using the MERN stack.
-              Specializing in creating seamless user experiences with React and
-              powerful backends with Node.js.
+              Full-Stack Web Developer with strong experience building scalable and secure web and mobile applications using React, Next.js, Node.js, and Express.
             </p>
           </motion.div>
           

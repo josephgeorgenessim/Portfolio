@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTheme } from "./ThemeProvider";
+import { useTheme } from "../theme/ThemeProvider";
 
 // Define tech stack with icons
 const techStack = [
@@ -121,15 +121,15 @@ export default function About() {
             className="bg-background rounded-lg p-6 md:p-8 shadow-md mb-10"
           >
             <p className="text-muted-foreground mb-4">
-              I'm Joseph George Nessim, a passionate Full-Stack MERN Developer with a strong foundation in building modern web applications. With 2+ years of experience in web development, I specialize in creating performant and user-friendly applications that solve real-world problems.
+              Full-Stack Web Developer with strong experience building scalable and secure web and mobile applications using React, Next.js, Node.js, and Express. Proven ability to deliver production-ready systems, optimize performance, and design clean APIs.
             </p>
 
             <p className="text-muted-foreground mb-4">
-              My journey in web development started during my Computer Science studies, where I discovered my passion for creating interactive web experiences. Since then, I've worked on various projects ranging from e-commerce platforms to data visualization dashboards.
+              I'm passionate about backend architecture, DevOps practices, and system design, with a solid foundation in networking and cloud computing. Currently a 4th-year Computer Science student at Benha University, I'm constantly learning and exploring new technologies.
             </p>
 
             <p className="text-muted-foreground">
-              I'm constantly learning and exploring new technologies to stay at the forefront of web development. I believe in writing clean, maintainable code and building applications with scalability in mind.
+              I believe in writing clean, maintainable code and building applications with scalability in mind. Whether it's a dynamic dashboard or a complex portal, I focus on delivering seamless user experiences through the MERN stack and modern cloud solutions.
             </p>
           </motion.div>
 

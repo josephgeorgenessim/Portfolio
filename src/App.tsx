@@ -1,13 +1,13 @@
-import { Toaster } from '@/components/ui/sonner';
-import { ThemeProvider } from './components/ThemeProvider';
-import Navbar from './components/navbar';
-import Hero from './components/hero';
-import About from './components/about';
-import Projects from './components/projects';
-import CVSection from './components/cv-section';
-import SocialLinks from './components/social-links';
-import ContactForm from './components/contact-form';
-import Footer from './components/footer';
+import { Toaster } from './components/ui/sonner';
+import { ThemeProvider } from './components/theme/ThemeProvider';
+import Navbar from './components/layout/navbar';
+import Hero from './components/sections/hero';
+import About from './components/sections/about';
+import Projects from './components/sections/projects';
+import CVSection from './components/sections/cv-section';
+import SocialLinks from './components/layout/social-links';
+import ContactForm from './components/sections/contact-form';
+import Footer from './components/layout/footer';
 
 const App = () => (
   <ThemeProvider defaultTheme="system" storageKey="joseph-portfolio-theme">
