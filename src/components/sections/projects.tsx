@@ -76,17 +76,19 @@ const projects = [
   },
   {
     id: 5,
-    title: "Portfolio Website (Next.js)",
-    description: "Modern portfolio built with Next.js App Router and Tailwind CSS. Features SEO optimization, dynamic routing, and responsive design.",
-    image: "/assets/projects/portfolio.jpg",
+    title: "TaskFlow --- Todo List Application",
+    description: "A modern, responsive todo list application built with React and Vite. Features secure authentication, task categorization (Pending, Completed, Archived), and persistent data management.",
+    image: "/assets/projects/todolist.png",
     technologies: [
-      "Next.js",
-      "TypeScript",
+      "React",
+      "Vite",
       "Tailwind CSS",
-      "Framer Motion",
+      "Radix UI",
+      "Lucide React",
+      "Context API",
     ],
-    liveLink: "https://portfolio-website-green.vercel.app/",
-    githubLink: "https://github.com/josephgeorgenessim/Portfolio",
+    liveLink: "https://todo-list-opal-rho.vercel.app/login",
+    githubLink: "https://github.com/josephgeorgenessim/todo-list",
   },
 ];
 
